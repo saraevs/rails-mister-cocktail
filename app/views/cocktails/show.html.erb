@@ -12,6 +12,7 @@
     <li>
       <%= dose.description %>
       <%= dose.ingredient.name %>
+      <%= link_to '➖', doses_path(dose.id), method: :delete %>
     </li>
   <% end %>
 </ul>

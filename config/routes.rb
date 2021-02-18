@@ -8,4 +8,7 @@ Rails.application.routes.draw do
   # a user can add a new dose
   get 'cocktails/:cocktail_id/doses/new', to: 'doses#new', as: 'cocktail_dose_new'
   post 'cocktails/:cocktail_id/doses', to: 'doses#create', as: 'cocktail_doses'
+
+  # a user can delete a dose from a cocktail
+  delete '/doses/:id', to: 'doses#destroy', as: 'doses'
 end
